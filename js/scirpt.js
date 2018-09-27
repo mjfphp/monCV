@@ -1,6 +1,7 @@
 $(document).ready( function() {
 
-	// Logo
+    // Logo
+    $(".histo").hide();
 	var $logo = $('#logo');
 	 if (location.href.indexOf("#") != -1) {
         if(location.href.substr(location.href.indexOf("#"))!='#about'){
@@ -16,7 +17,7 @@ $(document).ready( function() {
 	$('#tab-about').click(function() {
 	  $logo.slideUp('slow');
 	});	
-function animMeter(){
+    function animMeter(){
     $(".meter > span").each(function() {
                 $(this)
                     .data("origWidth", $(this).width())
@@ -26,6 +27,9 @@ function animMeter(){
                     }, 1200);
             });
 }
+   
+ 
+
 animMeter();
 
       $('#tab-container').easytabs({
@@ -46,5 +50,20 @@ animMeter();
             }, function () {
             $(".tb").remove();
       })
+
+      $("#plang").click(function(event){
+        event.preventDefault();
+        console.log($(this).text())
+        if($(this).text()=="histogramme"){
+            $(this).text("rating");
+            $(".stars").hide();
+            $(".histo").show();
+        }
+        else{
+            $(this).text("histogramme");
+            $(".stars").show();
+        }
+    })
+   
     });
 
