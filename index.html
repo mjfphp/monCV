@@ -23,6 +23,7 @@
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
    
+  <script src="js/scirpt.js"></script>
   <script src="js/main.js"></script>
   <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -140,8 +141,8 @@
                 <div id="resume">
                     <section class="clearfix">
                         <div class="g2">
-                            <h3>
-                                 Experiences
+                            <h3 id="exp">
+                                <button onclick="cacher('exp')">+</button>  Experiences
                             </h3>
                             <ul class="no-list work">
                                 <li>
@@ -173,8 +174,8 @@
                                     </p>
                                 </li>
                             </ul>
-                            <h3>
-                                Extra Activities
+                            <h3 id="exa">
+                                    <button onclick="cacher('exa')">+</button> Extra Activities
                             </h3>
                             <ul class="no-list work">
                                 <li>
@@ -210,8 +211,8 @@
                                     </p>
                                 </li>
                             </ul>
-                             <h3>
-                                Education
+                             <h3 id="edu">
+                                    <button onclick="cacher('edu')">+</button> Education
                             </h3>
                             <ul class="no-list work">
                                  <li>
@@ -235,9 +236,10 @@
                         </div>
                         <div class="g1">
                             <div class="sidebar">
-                                <h3>
-                                    Skills
+                                <h3 id="skills">
+                                        <button onclick="cacher('skills')">+</button> Skills
                                 </h3>
+                                <div>
                                     <div >
                                         <span style="width: 33.3%"><span> - FullStack  Web Developer </span></span>
                                     </div>
@@ -255,10 +257,11 @@
                                     </div>
                                     </br>
 
-
-                                <h5>
-                                    Programming Language
+                                </div>
+                                <h5 id="PL">
+                                        <button onclick="cacher('PL')">+</button> Programming Language
                                 </h5>
+                                <div>
                                 <div >
                                     <span style="width: 33.3%"><span> - HTML </span></span>
                                 </div>
@@ -310,12 +313,12 @@
                                 <div >
                                     <span style="width: 33.3%"><span> - x86asembly </span></span>
                                 </div>
-                                
+                                </div>
                                 <div class="break"></div>
-                                <h5>
-                                    Frameworks & Libraries
+                                <h5 id="FL">
+                                        <button onclick="cacher('FL')">+</button>  Frameworks & Libraries
                                 </h5>
-
+                                 <div>
                                 <div >
                                     <span style="width: 33.3%"><span> - JEE </span></span>
                                 </div>
@@ -366,11 +369,12 @@
                                 </br>
                                 
                                 <div class="break"></div>
-                                <h5>
-                                    Database
+                                </div>
+                                <h5 id="db">
+                                        <button onclick="cacher('db')">+</button> Database
                                 </h5>
                                 
-
+                                <div>
                                 <div >
                                     <span style="width: 33.3%"><span> - MySQL </span></span>
                                 </div>                          
@@ -395,10 +399,11 @@
                                 
 
                                 <div class="break"></div>
-                                <h5>
-                                    Tools
+                                </div>
+                                <h5 id="tools">
+                                        <button onclick="cacher('tools')">+</button>  Tools
                                 </h5>
-
+                                <div>
                                 <div >
                                     <span style="width: 33.3%"><span> - Git (Github) </span></span>
                                 </div>
@@ -433,7 +438,7 @@
                                     <span style="width: 33.3%"><span> - Matlab </span></span>
                                 </div>
                                 </br>
-
+                                xu.childNodes.innerText</div>
                             </div>
                         </div>
                     </section>
