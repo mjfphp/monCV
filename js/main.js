@@ -4,8 +4,7 @@
 
 let cacher=(e)=>{
 
-    let xu=document.getElementById(e)
-    let x=xu.nextElementSibling;
+    let x=document.getElementById(e).nextElementSibling;
    
 
     console.log(e);
@@ -15,10 +14,8 @@ let cacher=(e)=>{
        
     } else {
         x.style.display = "none";
-        console.log(xu.childNodes[0]);
-      
-        
     }
     
     
 };
+

@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
 	// Logo
-	var $logo 	= $('#logo');
+	var $logo = $('#logo');
 	 if (location.href.indexOf("#") != -1) {
         if(location.href.substr(location.href.indexOf("#"))!='#about'){
         	$logo.show();
@@ -39,5 +39,12 @@ animMeter();
                     animMeter();
             }
         });
+
+     $(".tooltip").hover(function () {
+            var titleText=$(this).attr("title");
+            $(this).after("<div class='tb'>" +$(this).attr("data-info")+ "</div>");
+            }, function () {
+            $(".tb").remove();
+      })
     });
 
