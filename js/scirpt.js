@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
     // Logo
-    $(".histo").hide();
+    $(".canvas").hide();
 	var $logo = $('#logo');
 	 if (location.href.indexOf("#") != -1) {
         if(location.href.substr(location.href.indexOf("#"))!='#about'){
@@ -57,11 +57,12 @@ animMeter();
         if($(this).text()=="histogramme"){
             $(this).text("rating");
             $(".stars").hide();
-            $(".histo").show();
+            $(".canvas").show("slow");
         }
         else{
             $(this).text("histogramme");
-            $(".stars").show();
+            $(".canvas").hide();
+            $(".stars").show("slow");
         }
     })
    

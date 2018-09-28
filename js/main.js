@@ -1,6 +1,5 @@
 
 
-
 let cacher=(e)=>{
 
     let x=document.getElementById(e).nextElementSibling;
